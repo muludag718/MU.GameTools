@@ -2,6 +2,7 @@
 
 public static class NumberHelpers
 {
+
     public static int Align(this int value, int align)
     {
         if (value != 0)
