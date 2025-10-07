@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MU.GameTools.FileFormats", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MU.GameTools.Squish", "MU.GameTools.Squish\MU.GameTools.Squish.csproj", "{7AE9F18C-E8FB-434A-9798-9C42F7469BD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MU.GameTools.Common", "MU.GameTools.Common\MU.GameTools.Common.csproj", "{A7062501-49E9-49A9-81FF-48C9B69FC796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MU.GameTools.Prototype.Tod", "MU.GameTools.Prototype.Tod\MU.GameTools.Prototype.Tod.csproj", "{3B766A15-68DE-4AFC-B848-1E1DAFE882A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{7AE9F18C-E8FB-434A-9798-9C42F7469BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE9F18C-E8FB-434A-9798-9C42F7469BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE9F18C-E8FB-434A-9798-9C42F7469BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7062501-49E9-49A9-81FF-48C9B69FC796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7062501-49E9-49A9-81FF-48C9B69FC796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7062501-49E9-49A9-81FF-48C9B69FC796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7062501-49E9-49A9-81FF-48C9B69FC796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B766A15-68DE-4AFC-B848-1E1DAFE882A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B766A15-68DE-4AFC-B848-1E1DAFE882A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B766A15-68DE-4AFC-B848-1E1DAFE882A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B766A15-68DE-4AFC-B848-1E1DAFE882A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
