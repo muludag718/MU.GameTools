@@ -1,5 +1,5 @@
 using MU.GameTools.IO;
-usingMU.GameTools.Common;
+using MU.GameTools.Common;
 using MU.GameTools.Prototype.Fight.Property;
 
 namespace MU.GameTools.Prototype.Fight.Branch;

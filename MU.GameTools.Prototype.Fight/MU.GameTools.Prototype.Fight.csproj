@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MU.GameTools.Common\MU.GameTools.Common.csproj" />
+    <ProjectReference Include="..\MU.GameTools.IO\MU.GameTools.IO.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MU.GameTools.Common\MU.GameTools.Common.csproj" />
+    <ProjectReference Include="..\MU.GameTools.IO\MU.GameTools.IO.csproj" />
+    <ProjectReference Include="..\MU.GameTools.Prototype.Fight\MU.GameTools.Prototype.Fight.csproj" />
+    <ProjectReference Include="..\MU.GameTools.Prototype.Tod\MU.GameTools.Prototype.Tod.csproj" />
+    <ProjectReference Include="..\MU.GameTools.Squish\MU.GameTools.Squish.csproj" />
+  </ItemGroup>
+
+</Project>

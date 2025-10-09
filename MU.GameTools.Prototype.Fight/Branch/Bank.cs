@@ -1,4 +1,4 @@
-usingMU.GameTools.Common;
+using MU.GameTools.Common;
 using MU.GameTools.IO;
 using MU.GameTools.Prototype.Fight.Property;
 
