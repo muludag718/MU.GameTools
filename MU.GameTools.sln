@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MU.GameTools.Prototype.Figh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MU.GameTools.Prototype.FileFormats", "MU.GameTools.Prototype.FileFormats\MU.GameTools.Prototype.FileFormats.csproj", "{D3C57856-A60B-42EF-BCD7-847ACF9910E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MU.GameTools.Prototype2", "MU.GameTools.Prototype2\MU.GameTools.Prototype2.csproj", "{99495B93-DB14-4EDD-824A-CB93800A831A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{D3C57856-A60B-42EF-BCD7-847ACF9910E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3C57856-A60B-42EF-BCD7-847ACF9910E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3C57856-A60B-42EF-BCD7-847ACF9910E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99495B93-DB14-4EDD-824A-CB93800A831A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99495B93-DB14-4EDD-824A-CB93800A831A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99495B93-DB14-4EDD-824A-CB93800A831A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99495B93-DB14-4EDD-824A-CB93800A831A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
