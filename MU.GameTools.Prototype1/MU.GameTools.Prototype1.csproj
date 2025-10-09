@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MU.GameTools.Common\MU.GameTools.Common.csproj" />
+    <ProjectReference Include="..\MU.GameTools.IO\MU.GameTools.IO.csproj" />
+    <ProjectReference Include="..\MU.GameTools.Prototype.FileFormats\MU.GameTools.Prototype.FileFormats.csproj" />
+  </ItemGroup>
+
 </Project>
