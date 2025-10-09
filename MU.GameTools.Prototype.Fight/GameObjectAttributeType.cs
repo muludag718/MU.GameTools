@@ -1,0 +1,17 @@
+namespace MU.GameTools.Prototype.Fight
+{
+	public enum GameObjectAttributeType : ulong
+	{
+		Undefined = 11501367102844296472uL,
+		Bool = 18631057157774572uL,
+		Int = 314129536211uL,
+		Float = 4980286969596303762uL,
+		String = 18302039109564851735uL,
+		UID = 365769659290uL,
+		Vector = 5064582562380300869uL,
+		GameObjectHandle = 18060360142119993637uL,
+		LuaTable = 14883956799589340158uL,
+		LuaFunction = 17552965369412705998uL,
+		LuaThread = 4283933981248107766uL
+	}
+}

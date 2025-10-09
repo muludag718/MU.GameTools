@@ -1,0 +1,19 @@
+namespace MU.GameTools.Prototype.Fight
+{
+	public enum PropertyHash : ulong
+	{
+		InitialTracks = 10907595435911549452uL,
+		Functions = 5884039357143479095uL,
+		ExitTracks = 7377826839951285708uL,
+		EnterTracks = 16335132794923941146uL,
+		Conditions = 8743080268224679434uL,
+		Tracks = 14021602511724908772uL,
+		Lods = 30487493890819308uL,
+		ReverseConditions = 9440182720837839536uL,
+		OnCornerConditions = 16936078494672305378uL,
+		LeftAnim = 1313638328200977740uL,
+		RightAnim = 8687470983751805445uL,
+		BackAnim = 16436703581921599506uL,
+		Effect = 2076383322900159339uL
+	}
+}

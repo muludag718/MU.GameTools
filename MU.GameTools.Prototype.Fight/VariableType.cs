@@ -1,0 +1,24 @@
+namespace MU.GameTools.Prototype.Fight
+{
+	public enum VariableType : ulong
+	{
+		Attack = 17648781240126830036uL,
+		Faction = 1292973792857699032uL,
+		Consume = 1055741811302362110uL,
+		ShoveSoldier = 13577239896384429495uL,
+		SmallJump = 5696447484198685313uL,
+		Landing = 4156021868774120333uL,
+		Shapeshift = 7769794507736539537uL,
+		Holding = 10464599244845980941uL,
+		Sprinting = 9711996010741593352uL,
+		Wallrunning = 16928757649612775713uL,
+		Climbing = 5229273973122016849uL,
+		InsideBase = 12062043728698398903uL,
+		InsidePerimeter = 4961226280533068997uL,
+		FriendlyFire = 12964894137012448181uL,
+		FriendlyFireDamage = 7480914655445588610uL,
+		CivilianFire = 27389482178774899uL,
+		InfectedAlly = 9316695645585647742uL,
+		MilitaryAlly = 1695464981656378239uL
+	}
+}

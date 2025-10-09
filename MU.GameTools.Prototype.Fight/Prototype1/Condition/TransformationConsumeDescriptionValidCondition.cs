@@ -1,0 +1,24 @@
+using System.IO;
+using MU.GameTools.IO;
+
+namespace MU.GameTools.Prototype.Fight.Prototype1.Condition
+{
+	[KnownNodeForContext(ContextHash.Motion)]
+	[KnownCondition(ConditionHash.TransformationConsumeDescriptionValid)]
+	public class TransformationConsumeDescriptionValidCondition : P1Condition
+	{
+		public bool IsValid { get; set; }
+
+		public override void Serialize(Stream output, Endian endianess)
+		{
+			base.Serialize(output, endianess);
+			output.WriteValueB32(IsValid, endianess);
+		}
+
+		public override void Deserialize(Stream input, Endian endianess)
+		{
+			base.Deserialize(input, endianess);
+			IsValid = input.ReadValueB32(endianess);
+		}
+	}
+}

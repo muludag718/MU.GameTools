@@ -1,0 +1,23 @@
+using System.IO;
+using MU.GameTools.IO;
+
+namespace MU.GameTools.Prototype.Fight.Prototype1.Condition
+{
+	[KnownCondition(ConditionHash.InBlastArea)]
+	public class InBlastAreaCondition : P1Condition
+	{
+		public bool UseDestination { get; set; }
+
+		public override void Serialize(Stream output, Endian endianess)
+		{
+			base.Serialize(output, endianess);
+			output.WriteValueB32(UseDestination, endianess);
+		}
+
+		public override void Deserialize(Stream input, Endian endianess)
+		{
+			base.Deserialize(input, endianess);
+			UseDestination = input.ReadValueB32(endianess);
+		}
+	}
+}

@@ -1,0 +1,16 @@
+namespace MU.GameTools.Prototype.Fight
+{
+	public enum BranchHash : ulong
+	{
+		Chunk = 7021078959221846271uL,
+		StateMachine = 4359263088009983578uL,
+		Bank = 27664593011459322uL,
+		Node = 31052086116492924uL,
+		Store = 8163269272626025203uL,
+		Reference = 9791952581861958631uL,
+		State = 8163269264019698807uL,
+		Transition = 16414221063871377845uL,
+		PlaybackSet = 4826239466064161373uL,
+		PlaybackNode = 13462353259087708995uL
+	}
+}
