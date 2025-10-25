@@ -7,7 +7,7 @@ using MU.GameTools.Common;
 namespace MU.GameTools.Prototype.FileFormats.Pure3D.Prototype1
 {
 	[KnownGame(PrototypeGame.P1)]
-	[KnownType(4261412864u)]
+	[KnownType(4261412864)]
 	public class Audio : BaseNode
 	{
 		public AudioType AudioType;

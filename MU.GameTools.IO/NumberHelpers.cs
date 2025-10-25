@@ -300,7 +300,10 @@ public static class NumberHelpers
 
     public static uint Swap(this uint value)
     {
-        return (0xFF & (value >> 24)) | (0xFF00 & (value >> 8)) | (0xFF0000 & (value << 8)) | (0xFF000000u & (value << 24));
+        return (0xFF & (value >> 24)) |
+               (0xFF00 & (value >> 8)) |
+               (0xFF0000 & (value << 8)) |
+               (0xFF000000u & (value << 24));
     }
 
     public static long Swap(this long value)

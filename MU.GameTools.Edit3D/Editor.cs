@@ -8,6 +8,8 @@ using MU.GameTools.Prototype.FileFormats;
 using MU.GameTools.Prototype.FileFormats.Pure3D;
 using MU.GameTools.Common;
 using MU.GameTools.Edit3D.Tools.Viewer;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace MU.GameTools.Edit3D;
 
@@ -114,6 +116,7 @@ public class Editor : Form
 
     private ToolStripMenuItem prototype2ToolStripMenuItem1;
     private ToolStripMenuItem folderToolStripMenuItem;
+    private ToolStripMenuItem nodeToolStripMenuItem;
     private ToolStripMenuItem moddingMenuItem;
 
     public Endian Endianess
@@ -592,6 +595,7 @@ public class Editor : Form
         saveP3DFileDialog = new SaveFileDialog();
         folderBrowserDialog = new FolderBrowserDialog();
         tabControl = new ChromeLikeTabControl();
+        nodeToolStripMenuItem = new ToolStripMenuItem();
         editorMenuStrip.SuspendLayout();
         SuspendLayout();
         // 
@@ -607,7 +611,7 @@ public class Editor : Form
         // 
         // fileMenuItem
         // 
-        fileMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem, toolStripSeparator1, saveToolStripMenuItem, saveAsToolStripMenuItem, saveAllToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
+        fileMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem, toolStripSeparator1, saveToolStripMenuItem, saveAsToolStripMenuItem, saveAllToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem, nodeToolStripMenuItem });
         fileMenuItem.Name = "fileMenuItem";
         fileMenuItem.Size = new Size(37, 20);
         fileMenuItem.Text = "File";
@@ -896,7 +900,14 @@ public class Editor : Form
         tabControl.TabIndex = 1;
         tabControl.SelectedIndexChanged += tabControl_SelectedIndexChanged;
         // 
-        // EditorV2
+        // nodeToolStripMenuItem
+        // 
+        nodeToolStripMenuItem.Name = "nodeToolStripMenuItem";
+        nodeToolStripMenuItem.Size = new Size(180, 22);
+        nodeToolStripMenuItem.Text = "node";
+        nodeToolStripMenuItem.Click += nodeToolStripMenuItem_Click;
+        // 
+        // Editor
         // 
         AllowDrop = true;
         AutoScaleDimensions = new SizeF(7F, 15F);
@@ -907,7 +918,7 @@ public class Editor : Form
         MainMenuStrip = editorMenuStrip;
         Margin = new Padding(4, 3, 4, 3);
         MinimumSize = new Size(931, 686);
-        Name = "EditorV2";
+        Name = "Editor";
         SizeGripStyle = SizeGripStyle.Hide;
         Text = "EditP3D";
         DragDrop += OnDragDrop;
@@ -921,6 +932,48 @@ public class Editor : Form
     private void fileMenuItem_Click(object sender, EventArgs e)
     {
 
+    }
+
+    private void nodeToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        Type baseType = typeof(BaseNode);
+
+        var derivedTypes = AppDomain.CurrentDomain.GetAssemblies()
+            .SelectMany(asm =>
+            {
+                try { return asm.GetTypes(); }
+                catch { return new Type[0]; }
+            })
+            .Where(t => t.IsClass && !t.IsAbstract && baseType.IsAssignableFrom(t));
+
+        foreach (var type in derivedTypes)
+        {
+            // KnownGame attribute'larýný güvenli þekilde al
+            var knownGames = type.GetCustomAttributes(typeof(KnownGameAttribute), false)
+                .Select(attr =>
+                {
+                    var prop = attr.GetType().GetProperty("Game", BindingFlags.Public | BindingFlags.Instance);
+                    return prop != null ? prop.GetValue(attr)?.ToString() : null;
+                })
+                .Where(v => v != null)
+                .ToArray();
+
+            string games = knownGames.Length > 0 ? string.Join(",", knownGames) : "Any";
+
+            // KnownType attribute'larýný güvenli þekilde al
+            var knownTypes = type.GetCustomAttributes(typeof(KnownTypeAttribute), false)
+                .Select(attr =>
+                {
+                    var prop = attr.GetType().GetProperty("TypeId", BindingFlags.Public | BindingFlags.Instance);
+                    return prop != null ? prop.GetValue(attr)?.ToString() : null;
+                })
+                .Where(v => v != null)
+                .ToArray();
+
+            string types = knownTypes.Length > 0 ? string.Join(",", knownTypes) : "null";
+
+            Debug.WriteLine($"{type.Name}-{games}-{types}");
+        }
     }
 }
 
